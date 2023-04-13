@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4 - JS lanjutan</title>
+</head>
+<body>
+    <h1 id="canva"></h1>
+    <h1 id="tahun"></h1>
+    <h1 id="math"></h1>
+    <h1 id="pi"></h1>
+    <h1 id="string"></h1>
+    <h1 id="nama"></h1>
+    <h1 id="namaumur"></h1>
+    <h1 id="calculator"></h1>
+
+    <script>
+        //Membuat variabel tangga
+        const tanggal = new Date();
+        //Masukkan variabel tanggal ke object document dengan id canva
+        document.getElementById('canva'). innerHTML = tanggal;
+
+        let tahun = tanggal.getFullYear();
+        document.getElementById('tahun'). innerHTML = tahun;
+
+        //Membuat variabel integer
+        let angka = 1.6;
+        let pembulatan = Math.round(angka);
+        //Menampilkan angka di document dengan id math
+        document.getElementById('math'). innerHTML = angka + " dibulatkan " + pembulatan;
+
+        //Membuat variabel konstanta
+        const PI = Math.PI;
+        //Menampilkan PI di document dengan id pi
+        document.getElementById('pi'). innerHTML = PI;
+
+        //Membuat variabel string
+        const teks = "Hello World";
+        //Menampilkan teks di document dengan id string 
+        document.getElementById('string'). innerHTML = teks.toLocaleUpperCase();
+
+        //Membuat array variabel JavaScript
+        let data = ["Fitria", " Amanda", " Rawless"];
+        //Menampilkan data array di document dengan id nama
+        document.getElementById('nama'). innerHTML = data + "  panggil satu nama saja " + data[1];
+
+        //Membuat array multidimensi variabel JavaScript
+        let data_multi = [
+            ["Fitria", 18],
+            ["Amanda", 21],
+            ["Rawless", 19],
+        ];
+        //Menampilkan data array di document dengan id namaumur
+        document.getElementById('namaumur'). innerHTML = 'Nama = ' + data_multi[0][0] + " Umur = " + data_multi[0][1];
+
+        //Membuat 2 variabel integer
+        let angka1 = 68;
+        let angka2 = 136;
+        let hasil = angka1 + angka2;
+        //Menampilkan hasi operator JavaScript
+        document.getElementById('calculator'). innerHTML = "Hasil  " + angka1 + " + " + angka2 + " = " + hasil;
+
+    </script>
+</body>
+</html>
